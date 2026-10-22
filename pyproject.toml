@@ -1,26 +1,22 @@
 [project]
 name = "indicabr"
 version = "0.1.0"
-description = "Add your description here"
+description = "Agente de IA que responde perguntas sobre indicadores econômicos do Brasil"
 readme = "README.md"
 authors = [
     { name = "Fabio Augusto", email = "fabio.augusto.rodrig@gmail.com" }
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "httpx>=0.28.1",
     "openai>=3.36.0",
 ]
-
-[project.scripts]
-indicabr = "indicabr:main"
-
-[build-system]
-requires = ["uv_build>=0.13.4,<0.14.0"]
-build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
     "pytest>=9.1.1",
     "ruff>=0.17.1",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

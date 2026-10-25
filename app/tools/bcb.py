@@ -50,7 +50,7 @@ async def fetch_sgs_series(
 
     try:
         response = await client.get(
-            SGS_URL.format(x=code), params=params, timeout=TIMEOUT
+            SGS_URL.format(code=code), params=params, timeout=TIMEOUT
         )
         # SGS answers 404 (not an empty list) when the period has no data, e.g. a weekend
         # for a daily series. Other 404s (such as an unknown series code) are real errors.
